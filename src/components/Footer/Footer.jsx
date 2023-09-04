@@ -1,46 +1,46 @@
-import React from 'react'
-import styles from '../../styles/Header.module.css'
-import { Link } from 'react-router-dom'
-import { ROUTES } from '../../utils/routes'
-import LOGO from '../../images/logo.svg'
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Footer() {
-    return (
-        <section className={styles.footer}>
-            <div className={styles.logo}>
-                <Link to={ROUTES.HOME}>
-                    <img src={LOGO} alt="Stuff" />
-                </Link>
-            </div>
+import styles from "../../styles/Footer.module.css";
+import { ROUTES } from "../../utils/routes";
 
-            <div className={styles.rights}>
-                Developed by{" "}
-                <a href="https://biryukova.org/" target="_blank" rel="noreferrer">
-                    Elizaveta Biryukova
-                </a>
-            </div>
+import LOGO from "../../images/logo.svg";
 
-            <div className={styles.socials}>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                    <svg className="icon">
-                        <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#instagram`} />
-                    </svg>
-                </a>
+const Footer = () => (
+    <section className={styles.footer}>
+        <div className={styles.logo}>
+            <Link to={ROUTES.HOME}>
+                <img src={LOGO} alt="Stuff" />
+            </Link>
+        </div>
 
-                <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                    <svg className="icon">
-                        <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#facebook`} />
-                    </svg>
-                </a>
+        <div className={styles.rights}>
+            Developed by{" "}
+            <a href="https://biryukova.org/" target="_blank" rel="noreferrer">
+                Biryukova Elizaveta
+            </a>
+        </div>
 
-                <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                    <svg className="icon">
-                        <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#youtube`} />
-                    </svg>
-                </a>
-            </div>
-        </section>
-    )
-}
+        <div className={styles.socials}>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <svg className="icon">
+                    <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#instagram`} />
+                </svg>
+            </a>
 
-export default Footer
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <svg className="icon">
+                    <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#facebook`} />
+                </svg>
+            </a>
+
+            <a href="https://youtube.com" target="_blank" rel="noreferrer">
+                <svg className="icon">
+                    <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#youtube`} />
+                </svg>
+            </a>
+        </div>
+    </section>
+);
+
+export default Footer;

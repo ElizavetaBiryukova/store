@@ -11,6 +11,7 @@ export const getCategories = createAsyncThunk('categories/getCategories', async 
         return thunkAPI.rejectWithValue(err);
     }
 })
+
 const categoriesSlice = createSlice({
     name: 'categories',
     initialState: {
